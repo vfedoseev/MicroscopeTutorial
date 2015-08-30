@@ -11,8 +11,13 @@
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
+				{{#if currentUser}}
+					<li>
+						<a href="{{pathFor 'postSubmit'}}">Submit Post</a>
+					</li>
+				{{/if}}
 				<li>
-					<a href="{{pathFor 'postSubmit'}}">Submit Post</a>
+					<a href="{{pathFor 'postSubmit'}}">{{text}}</a>
 				</li>
 			</ul>
 			<ul class="nav navbar-nav pull-right">
