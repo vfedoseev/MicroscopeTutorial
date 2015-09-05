@@ -22,7 +22,7 @@ Package.onUse(function(api) {
 });
 
 Package.onTest(function(api) {
-  api.use('tinytest');
-  api.use('vfedoseev:errors');
-  api.addFiles('errors-tests.js');
+  api.use(['tinytest', 'test-helpers'], 'client');
+  api.use('vfedoseev:errors', 'client');
+  api.addFiles('errors-tests.js', 'client');
 });
