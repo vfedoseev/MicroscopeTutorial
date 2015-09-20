@@ -13,3 +13,7 @@ Meteor.publish('allPosts', function(author){
 		date: false
 	}});
 });
+
+Meteor.publish('notifications', function() {
+	return Notifications.find();
+})
