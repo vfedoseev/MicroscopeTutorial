@@ -14,7 +14,7 @@ var postsData = [
 ];
 
 Template.postsList.helpers({
-	posts: function() {
+	/*posts: function() {
 		return Posts.find({},{sort: {submitted: -1}});
-	}
+	}*/
 });

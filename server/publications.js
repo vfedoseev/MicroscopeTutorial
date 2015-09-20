@@ -1,6 +1,6 @@
 //publish uses _publishCursor() when returning a cursor
-Meteor.publish('posts', function(author){
-	return Posts.find();
+Meteor.publish('posts', function(options){
+	return Posts.find({}, options);
 	return Posts.find({flagged: false, author: author});
 });
 
