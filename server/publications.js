@@ -16,5 +16,5 @@ Meteor.publish('allPosts', function(author){
 
 Meteor.publish('notifications', function() {
 	var currentUserId = this.userId;
-	return Notifications.find({userId: currentUserId});
+	return Notifications.find({userId: currentUserId, read: false});
 })
