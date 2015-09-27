@@ -3,7 +3,10 @@ Meteor.publish('posts', function(options){
 	return Posts.find({}, options);
 	return Posts.find({flagged: false, author: author});
 });
-
+Meteor.publish('singlePost', function(id) {
+	check(id,String)
+	return id && Posts.find(id);
+});
 Meteor.publish('comments', function(postId){
 	check(postId,String)
 	return Comments.find({postId: postId});
