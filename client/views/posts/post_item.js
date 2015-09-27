@@ -13,7 +13,7 @@ Template.postItem.helpers({
 			return 'btn-primary upvotable';
 		}
 		else {
-			return 'btn-primary  disabled';
+			return 'btn-primary disabled';
 		}
 	}
 });
